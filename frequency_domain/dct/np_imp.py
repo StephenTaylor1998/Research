@@ -7,7 +7,7 @@ def idct_1d_transform(p=8):
     :param p: length of coeff
     :return: idct1d transform
     """
-    fp = lambda i: np.sqrt(i / 8.)
+    fp = lambda i: np.sqrt(i / p)
     alpha = np.array([fp(1.), *fp(2. * np.ones(p - 1))]).reshape((1, p))
     x = np.array(np.linspace(1, p, p, dtype=float)).reshape((p, 1))
     u = np.array(np.linspace(1, p, p, dtype=float)).reshape((1, p))
