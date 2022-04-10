@@ -38,7 +38,7 @@ def idct_2d_transform(q=8, p=8):
     return transform
 
 
-def idct_1d_transform_np(p=8):
+def np_idct_1d_transform(p=8):
     """
     origin = np.einsum("xu, u -> x", transform, coeff)
     :param p: length of coeff
@@ -53,7 +53,7 @@ def idct_1d_transform_np(p=8):
     return transform
 
 
-def idct_2d_transform_np(q=8, p=8):
+def np_idct_2d_transform(q=8, p=8):
     """
     origin = np.einsum("yxvu, vu -> yx", transform, coeff)
     :param q: q->coeff[q, p]
