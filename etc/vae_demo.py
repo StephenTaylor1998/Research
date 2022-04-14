@@ -149,3 +149,4 @@ if __name__ == '__main__':
         c = torch.eye(10).to(device)
         sample = cvae.decoder(z, c)
         save_image(sample.view(10, 1, 28, 28), './samples/sample_' + '.png')
+
