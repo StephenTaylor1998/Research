@@ -3,7 +3,7 @@ from cleverhans.torch.utils import optimize_linear
 
 
 def fgm(model_fn, x, eps, norm, loss_fn=None,
-                         clip_min=None, clip_max=None, y=None, targeted=False):
+        clip_min=None, clip_max=None, y=None, targeted=False):
     x = x.clone().detach().to(torch.float).requires_grad_(True)
     if y is None:
         _, y = torch.max(model_fn(x), 1)
